@@ -1,0 +1,41 @@
+<h5>*ngIf</h5>
+
+<div *ngIf="mostraCursos">
+  Lista de cursos aqui: <br>
+
+  {{ cursos }}
+</div>
+<div *ngIf="!mostraCursos">
+  Não existem cursos para serem listados.
+</div>
+<br>
+<br>
+<button *ngIf="!mostraCursos" (click)="onMostraCursos()">Mostra cursos</button>
+<button *ngIf="mostraCursos" (click)="onMostraCursos()">Esconder cursos</button>
+<br><br>
+
+Usando a propriedade Hidden: <br><br>
+
+
+<div [hidden]="!mostraCursos">
+  Lista de cursos aqui: <br>
+
+  {{ cursos }}
+</div>
+<div [hidden]="mostraCursos">
+  Não existem cursos para serem listados.
+</div>
+<br>
+<br>
+<button [hidden]="mostraCursos" (click)="onMostraCursos()">Mostra cursos</button>
+<button [hidden]="!mostraCursos" (click)="onMostraCursos()">Esconder cursos</button>
+<br><br>
+
+
+
+
+
+
+<div *ngIf="mostraCursos">
+  Lista de cursos aqui.
+</div>
