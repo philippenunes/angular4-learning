@@ -6,7 +6,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { routing } from "./app.routing";
-import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +14,6 @@ import { DiretivaNgifComponent } from './diretiva-ngif/diretiva-ngif.component';
     CursosComponent,
     HomeComponent,
     LoginComponent,
-    DiretivaNgifComponent
   ],
   imports: [
     BrowserModule,
