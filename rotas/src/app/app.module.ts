@@ -17,6 +17,8 @@ import { LoginComponent } from './login/login.component';
 import { CursosService } from "./cursos/cursos.service";
 import { AlunosComponent } from './alunos/alunos.component';
 import { AuthGuardService } from "./guards/auth-guard.service";
+import { CursosGuard } from "./guards/cursos.guard";
+import { AlunosGuard } from "./guards/alunos.guard";
 
 
 
@@ -36,7 +38,12 @@ import { AuthGuardService } from "./guards/auth-guard.service";
     //AlunosModule,
     AppRoutingModule
   ],
-  providers: [AuthService, AuthGuardService],
+  providers: [
+    AuthService,
+    AuthGuardService,
+    CursosGuard,
+    AlunosGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
