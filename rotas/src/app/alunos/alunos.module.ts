@@ -1,3 +1,4 @@
+import { AlunosService } from './alunos.service';
 import { AlunosRoutingModule } from './alunos.routing.module';
 import { AlunosComponent } from './alunos.component';
 import { NgModule } from '@angular/core';
@@ -16,6 +17,6 @@ import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
         AlunosRoutingModule
     ],
     exports: [],
-    providers: [],
+    providers: [AlunosService],
 })
 export class AlunosModule {}

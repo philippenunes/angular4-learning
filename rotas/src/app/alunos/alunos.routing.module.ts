@@ -5,7 +5,7 @@ import { NgModule, Component } from '@angular/core';
 
 //Usando rotas filhas
 const alunosRoutes = [
-    {path: 'alunos', component: AlunosComponent, children: [
+    {path: '', component: AlunosComponent, children: [
         {path: 'novo', component: AlunoDetalheComponent},
         {path: ':id', component: AlunoDetalheComponent},
         {path: ':id/editar', component: AlunoDetalheComponent}

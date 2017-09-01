@@ -6,14 +6,20 @@ import { LoginComponent } from "./login/login.component";
 import { CursosComponent } from "./cursos/cursos.component";
 import { CursoDetalheComponent } from "./cursos/curso-detalhe/curso-detalhe.component";
 import { CursoNaoEncontradoComponent } from "./cursos/curso-nao-encontrado/curso-nao-encontrado.component";
+import { AuthService } from "./login/auth.service";
+import { AuthGuardService } from "./guards/auth-guard.service";
 
 const appRoutes: Routes = [
     
-    { path: 'cursos', component: CursosComponent },
-    { path: 'curso/:id', component: CursoDetalheComponent },
+    { path: 'cursos',
+        loadChildren: 'app/cursos/cursos.module#CursosModule',
+        canActivate: [AuthGuardService]
+    },
+    { path: 'alunos', loadChildren: 'app/alunos/alunos.module#AlunosModule',
+        canActivate: [AuthGuardService]    
+    },
     { path: 'login', component: LoginComponent },
-    { path: 'naoEncontrado', component: CursoNaoEncontradoComponent },
-    { path: '', component: HomeComponent }
+    { path: '', component: HomeComponent, canActivate: [AuthGuardService] }
 
 ];
 
